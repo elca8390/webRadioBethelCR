@@ -2,16 +2,55 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run the Radio Bethel app
+# Web Radio Bethel CR
 
-This contains everything you need to run your app locally.
+Aplicación web de radio en vivo para Bethel Costa Rica.
 
-## Run Locally
+## Características
 
-**Prerequisites:**  Node.js
+- Reproducción de radio en vivo
+- Interfaz moderna y responsiva
+- Diseño adaptado para dispositivos móviles y escritorio
 
+## Requisitos Previos
 
-1. Install dependencies:
-   `npm install`
-2. Run the app:
-   `npm run dev`
+- Node.js 18+
+- npm
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Desarrollo
+
+Iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en `http://localhost:3000`
+
+## Producción
+
+Generar build de producción:
+
+```bash
+npm run build
+```
+
+Los archivos generados estarán en la carpeta `dist/`
+
+## Tecnologías
+
+- React 19
+- Vite
+- TypeScript
+- Tailwind CSS
+- Motion (animaciones)
+
+## Licencia
+
+Todos los derechos reservados - Bethel Costa Rica
