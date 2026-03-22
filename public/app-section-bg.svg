@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Fondo decorativo Radio Bethel">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08111f"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#002b7f" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#002b7f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef3340" stop-opacity="0.78"/>
+      <stop offset="100%" stop-color="#ef3340" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurHeavy">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g filter="url(#blurHeavy)">
+    <ellipse cx="350" cy="220" rx="280" ry="180" fill="url(#blueGlow)"/>
+    <ellipse cx="1220" cy="240" rx="340" ry="200" fill="url(#redGlow)"/>
+    <ellipse cx="1120" cy="720" rx="300" ry="180" fill="url(#blueGlow)"/>
+    <ellipse cx="430" cy="700" rx="260" ry="160" fill="url(#redGlow)"/>
+  </g>
+
+  <g opacity="0.12">
+    <circle cx="240" cy="160" r="6" fill="#ffffff"/>
+    <circle cx="280" cy="200" r="4" fill="#ffffff"/>
+    <circle cx="1240" cy="130" r="5" fill="#ffffff"/>
+    <circle cx="1330" cy="220" r="4" fill="#ffffff"/>
+    <circle cx="1180" cy="700" r="5" fill="#ffffff"/>
+    <circle cx="340" cy="760" r="4" fill="#ffffff"/>
+  </g>
+</svg>
