@@ -13,7 +13,7 @@ const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=co.ecoing
 const WHATSAPP_URL = "https://wa.me/50670891457";
 
 const Header = () => (
-  <header className="bg-white/90 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50">
+  <header className="bg-stone-950/88 backdrop-blur-md border-b border-stone-800 sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-14 h-14 flex items-center justify-center overflow-hidden">
@@ -31,7 +31,7 @@ const Header = () => (
           <p className="text-[10px] uppercase tracking-[0.2em] text-bethel-red font-semibold">COSTA RICA</p>
         </div>
       </div>
-      <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+      <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
         <a href="#inicio" className="hover:text-bethel-blue transition-colors">Inicio</a>
         <a href="#nosotros" className="hover:text-bethel-blue transition-colors">Nosotros</a>
         <span
@@ -47,7 +47,7 @@ const Header = () => (
         href={ANDROID_APP_URL} 
         target="_blank" 
         rel="noopener noreferrer"
-        className="bg-bethel-blue text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-bethel-blue/90 transition-all flex items-center gap-2 shadow-lg shadow-bethel-blue/20"
+        className="bg-bethel-blue text-stone-950 px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-bethel-blue/90 transition-all flex items-center gap-2 shadow-lg shadow-bethel-blue/20"
       >
         <Smartphone size={18} />
         <span className="hidden sm:inline">Descargar App</span>
@@ -156,7 +156,7 @@ const AudioPlayer = () => {
         ? 'text-amber-600'
         : streamStatus === 'offline'
           ? 'text-red-600'
-          : 'text-stone-500';
+          : 'text-stone-400';
 
   const statusDot =
     streamStatus === 'playing'
@@ -168,11 +168,11 @@ const AudioPlayer = () => {
           : 'bg-stone-400';
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-stone-200 z-[100] py-4 px-6 shadow-2xl">
+    <div className="fixed bottom-0 left-0 right-0 bg-stone-950/95 backdrop-blur-xl border-t border-stone-800 z-[100] py-4 px-6 shadow-2xl">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4 w-full sm:w-auto">
           <div className="relative">
-            <div className={`w-14 h-14 bg-stone-100 rounded-xl flex items-center justify-center text-bethel-blue overflow-hidden shadow-inner p-1 ${isPlaying ? 'animate-pulse' : ''}`}>
+            <div className={`w-14 h-14 bg-stone-900 rounded-xl flex items-center justify-center text-bethel-blue overflow-hidden shadow-inner p-1 ${isPlaying ? 'animate-pulse' : ''}`}>
               <img 
                 src={LOGO_URL} 
                 alt="Logo" 
@@ -198,22 +198,22 @@ const AudioPlayer = () => {
           </div>
           <div>
             <p className="text-xs font-bold text-bethel-red uppercase tracking-widest mb-0.5">En Vivo</p>
-            <h3 className="text-base font-serif font-bold text-stone-900 leading-tight">Radio Bethel Costa Rica</h3>
-            <p className="text-xs text-stone-500">Transmitiendo desde Siquirres, Limón</p>
+            <h3 className="text-base font-serif font-bold text-stone-100 leading-tight">Radio Bethel Costa Rica</h3>
+            <p className="text-xs text-stone-400">Transmitiendo desde Siquirres, Limón</p>
           </div>
         </div>
 
         <div className="flex items-center gap-6">
           <button 
             onClick={togglePlayback}
-            className="w-14 h-14 bg-bethel-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-xl shadow-bethel-blue/30"
+            className="w-14 h-14 bg-bethel-blue text-stone-950 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-xl shadow-bethel-blue/30"
             aria-label={isPlaying ? 'Detener transmisión' : 'Reproducir transmisión'}
           >
             {isPlaying ? <Square size={24} fill="currentColor" /> : <Play size={28} className="ml-1" fill="currentColor" />}
           </button>
           
           <div className="hidden md:flex items-center gap-3 w-40">
-            <button onClick={toggleMute} className="text-stone-500 hover:text-bethel-blue transition-colors">
+            <button onClick={toggleMute} className="text-stone-400 hover:text-bethel-blue transition-colors">
               {isMuted || volume === 0 ? <VolumeX size={20} /> : <Volume2 size={20} />}
             </button>
             <input 
@@ -223,13 +223,13 @@ const AudioPlayer = () => {
               step="0.01" 
               value={isMuted ? 0 : volume} 
               onChange={handleVolumeChange}
-              className="w-full h-1.5 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-bethel-blue"
+              className="w-full h-1.5 bg-stone-800 rounded-lg appearance-none cursor-pointer accent-bethel-blue"
             />
           </div>
         </div>
 
         <div className="hidden lg:block text-right">
-          <p className="text-[10px] text-stone-400 uppercase tracking-widest mb-1">Señal Online</p>
+          <p className="text-[10px] text-stone-500 uppercase tracking-widest mb-1">Señal Online</p>
           <div className={`flex items-center gap-2 font-semibold text-sm ${statusTone}`}>
             <span className={`w-2 h-2 rounded-full ${statusDot}`} />
             {statusLabel}
@@ -249,8 +249,8 @@ const Hero = () => (
         alt="Bandera de Costa Rica"
         className="w-full h-full object-cover scale-110 saturate-[1.35] contrast-110 blur-sm"
       />
-      <div className="absolute inset-0 bg-white/52 backdrop-blur-md z-10" />
-      <div className="absolute inset-0 bg-gradient-to-br from-bethel-blue/12 via-transparent to-bethel-red/12 z-10" />
+      <div className="absolute inset-0 bg-stone-950/70 backdrop-blur-md z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-bethel-blue/20 via-stone-950/20 to-bethel-red/18 z-10" />
     </div>
     
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
@@ -261,19 +261,19 @@ const Hero = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-1.5 bg-bethel-red/10 text-bethel-red text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-6">
+          <span className="inline-block px-4 py-1.5 bg-bethel-red/12 text-bethel-red text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-6 border border-bethel-red/20">
             Siquirres, Limón • Costa Rica
           </span>
-          <h2 className="text-5xl sm:text-7xl font-serif font-bold text-stone-900 leading-[1.1] mb-8">
+          <h2 className="text-5xl sm:text-7xl font-serif font-bold text-stone-100 leading-[1.1] mb-8">
             Una Emisora <br/>
             <span className="text-bethel-blue italic">Bendiciendo</span> <br/>
             a Costa Rica
           </h2>
-          <p className="text-lg text-stone-600 leading-relaxed mb-10 max-w-xl">
+          <p className="text-lg text-stone-300 leading-relaxed mb-10 max-w-xl">
             Transmitiendo esperanza, fe y comunidad. Radio Bethel es un espacio dedicado a compartir música, reflexión y mensajes que fortalecen los valores en la familia.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="#nosotros" className="px-8 py-4 bg-white text-stone-900 border border-stone-200 rounded-xl font-bold hover:bg-stone-50 transition-all">
+            <a href="#nosotros" className="px-8 py-4 bg-stone-900 text-stone-100 border border-stone-700 rounded-xl font-bold hover:bg-stone-800 transition-all">
               Conocer Más
             </a>
           </div>
@@ -286,7 +286,7 @@ const Hero = () => (
           transition={{ duration: 1 }}
           className="relative"
         >
-          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white group">
+          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-stone-900 group">
             <img 
               src="/imagen-hero.jpeg" 
               alt="Radio Bethel Costa Rica" 
@@ -309,12 +309,12 @@ const Hero = () => (
 );
 
 const About = () => (
-  <section id="nosotros" className="scroll-mt-24 py-24 bg-white">
+  <section id="nosotros" className="scroll-mt-24 py-24 bg-stone-900">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
-        <h2 className="text-4xl font-serif font-bold text-stone-900 mb-6">Nuestra Misión</h2>
+        <h2 className="text-4xl font-serif font-bold text-stone-100 mb-6">Nuestra Misión</h2>
         <div className="w-20 h-1 bg-bethel-red mx-auto mb-8 rounded-full" />
-        <p className="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-stone-300 max-w-3xl mx-auto leading-relaxed">
           Radio Bethel Costa Rica es un espacio de comunicación dedicado a compartir música, reflexión y mensajes de esperanza para la comunidad.
         </p>
       </div>
@@ -343,13 +343,13 @@ const About = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.2 }}
-            className="p-8 rounded-2xl bg-stone-50 border border-stone-100 hover:border-bethel-blue/20 hover:shadow-xl transition-all group"
+            className="p-8 rounded-2xl bg-stone-950 border border-stone-800 hover:border-bethel-blue/30 hover:shadow-xl transition-all group"
           >
-            <div className="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 bg-stone-900 rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               {item.icon}
             </div>
-            <h3 className="text-xl font-bold text-stone-900 mb-4">{item.title}</h3>
-            <p className="text-stone-600 leading-relaxed">{item.desc}</p>
+            <h3 className="text-xl font-bold text-stone-100 mb-4">{item.title}</h3>
+            <p className="text-stone-300 leading-relaxed">{item.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -386,7 +386,7 @@ const AppDownload = () => (
                   href={ANDROID_APP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-4 bg-white text-stone-900 px-8 py-4 rounded-2xl font-bold hover:bg-stone-100 transition-all group"
+                  className="inline-flex items-center gap-4 bg-stone-100 text-stone-950 px-8 py-4 rounded-2xl font-bold hover:bg-white transition-all group"
                 >
                   <div className="bg-stone-900 text-white p-2 rounded-lg group-hover:scale-110 transition-transform">
                     <svg
@@ -437,7 +437,7 @@ const AppDownload = () => (
 );
 
 const Footer = () => (
-  <footer id="contacto" className="scroll-mt-24 bg-stone-50 pt-24 pb-32 border-t border-stone-200">
+  <footer id="contacto" className="scroll-mt-24 bg-stone-950 pt-24 pb-56 md:pb-32 border-t border-stone-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 lg:col-span-1">
@@ -450,7 +450,7 @@ const Footer = () => (
               <p className="text-[8px] uppercase tracking-[0.2em] text-bethel-red font-semibold">COSTA RICA</p>
             </div>
           </div>
-          <p className="text-stone-500 text-sm leading-relaxed mb-8">
+          <p className="text-stone-400 text-sm leading-relaxed mb-8">
             Transmitiendo esperanza, fe y comunidad desde Siquirres, Limón. Una emisora dedicada a compartir música, reflexión y mensajes que fortalecen la fe.
           </p>
           <div className="flex gap-4">
@@ -458,7 +458,7 @@ const Footer = () => (
               href="https://www.facebook.com/profile.php?id=61584990081292"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-white border border-stone-200 rounded-full flex items-center justify-center text-stone-600 hover:bg-bethel-blue hover:text-white hover:border-bethel-blue transition-all"
+              className="w-10 h-10 bg-stone-900 border border-stone-800 rounded-full flex items-center justify-center text-stone-300 hover:bg-bethel-blue hover:text-stone-950 hover:border-bethel-blue transition-all"
             >
               <Facebook size={18} />
             </a>
@@ -466,7 +466,7 @@ const Footer = () => (
               href="https://www.tiktok.com/@radiobethelcr"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-white border border-stone-200 rounded-full flex items-center justify-center text-stone-600 hover:bg-bethel-blue hover:text-white hover:border-bethel-blue transition-all"
+              className="w-10 h-10 bg-stone-900 border border-stone-800 rounded-full flex items-center justify-center text-stone-300 hover:bg-bethel-blue hover:text-stone-950 hover:border-bethel-blue transition-all"
               aria-label="TikTok"
             >
               <svg
@@ -484,7 +484,7 @@ const Footer = () => (
               href="https://www.paypal.com/donate/?hosted_button_id=WYWX63VWWAZLS"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-white border border-stone-200 rounded-full flex items-center justify-center text-stone-600 hover:bg-bethel-blue hover:text-white hover:border-bethel-blue transition-all"
+              className="w-10 h-10 bg-stone-900 border border-stone-800 rounded-full flex items-center justify-center text-stone-300 hover:bg-bethel-blue hover:text-stone-950 hover:border-bethel-blue transition-all"
               aria-label="Donar con PayPal"
             >
               <svg
@@ -504,8 +504,8 @@ const Footer = () => (
         </div>
         
         <div>
-          <h4 className="text-stone-900 font-bold mb-8 uppercase tracking-widest text-xs">Enlaces Rápidos</h4>
-          <ul className="space-y-4 text-sm text-stone-500">
+          <h4 className="text-stone-100 font-bold mb-8 uppercase tracking-widest text-xs">Enlaces Rápidos</h4>
+          <ul className="space-y-4 text-sm text-stone-400">
             <li><a href="#inicio" className="hover:text-bethel-blue transition-colors">Inicio</a></li>
             <li><a href="#nosotros" className="hover:text-bethel-blue transition-colors">Nosotros</a></li>
             <li>
@@ -522,8 +522,8 @@ const Footer = () => (
         </div>
         
         <div>
-          <h4 className="text-stone-900 font-bold mb-8 uppercase tracking-widest text-xs">Contacto</h4>
-          <ul className="space-y-6 text-sm text-stone-500">
+          <h4 className="text-stone-100 font-bold mb-8 uppercase tracking-widest text-xs">Contacto</h4>
+          <ul className="space-y-6 text-sm text-stone-400">
             <li className="flex gap-4">
               <MapPin size={20} className="text-bethel-red shrink-0" />
               <span>Siquirres, Limón<br/>Costa Rica</span>
@@ -541,7 +541,7 @@ const Footer = () => (
         
       </div>
       
-      <div className="pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-400">
+      <div className="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500">
         <p>© {new Date().getFullYear()} Radio Bethel Costa Rica. Todos los derechos reservados.</p>
         <p>
           Desarrollo web por{' '}
